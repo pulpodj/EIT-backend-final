@@ -279,10 +279,12 @@ body {
 .card__image {
   height: 170px;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__image:hover {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .card__body {
   display: flex;
@@ -362,7 +364,8 @@ body {
 .card-container {
   padding: 20px;
   display: flex;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   row-gap: 10px;
   flex-wrap: wrap;
 }
@@ -514,6 +517,9 @@ body {
   }
 }
 @media screen and (min-width: 600px) {
+  .product-search__input::-moz-placeholder {
+    color: white;
+  }
   .product-search__input::placeholder {
     color: white;
   }
@@ -551,6 +557,9 @@ body {
   border-radius: 5px;
   padding: 5px 10px;
   color: #1633B3;
+}
+.section-register__form-input::-moz-placeholder {
+  color: #C6D7A3;
 }
 .section-register__form-input::placeholder {
   color: #C6D7A3;
@@ -807,7 +816,7 @@ body {
   padding: 1rem;
   border: 3px solid black;
   margin: 1rem;
-  width: 300px;
+  width: 350px;
   height: 450px;
 }
 .admin-product-form__input {
@@ -864,7 +873,8 @@ body {
 }
 .admin-product__img {
   width: 70px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 70px;
   border-radius: 50%;
   display: block;
@@ -1311,7 +1321,8 @@ body {
 }
 .order__img {
   width: 70px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 70px;
   border-radius: 50%;
   display: block;
@@ -1469,6 +1480,9 @@ body {
   padding: 5px 10px;
   color: #1633B3;
 }
+.password-change__form-input::-moz-placeholder {
+  color: #C6D7A3;
+}
 .password-change__form-input::placeholder {
   color: #C6D7A3;
 }
@@ -1601,7 +1615,8 @@ body {
 }
 .my-account-order__img {
   width: 70px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 70px;
   border-radius: 50%;
   display: block;
