@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Order - Ecommerce</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+<main class="main">
+    <h1>Mi Orden de Pedido:</h1>
+    <div class="order-table-container">
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>IMAGEN</th>
+                    <th>PRODUCTO</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="order-table_body">
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="order-finalizar">
+        <button class="order-finalizar__btn" id="order-finalizar-btn" onclick="finalizarCompra()">
+            FINALIZAR COMPRA
+        </button>
+    </div>
+</main>
+
+<%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/orders.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detalle del Producto</title>
+</head>
+<body>
+    
+    <%- include('partials/header') %>
+
+    <main class="main">
+        <div class="product-datail-container">
+            <div class="product-detail-container-img">
+                <img src="" alt="" class="product-detail-container-img__img" id="product-detail-container-img-img">
+            </div>
+            <div class="product-detail-container-order">
+                <div class="product-detail-container-order-head">
+                    <label class="product-detail-container-order-head__category" 
+                    id="product-detail-container-order-head__category"></label><br>
+                    <label class="product-detail-container-order-head__name"
+                    id="product-detail-container-order-head__name"></label>
+                </div>
+                <div class="product-detail-container-order-main">
+                    <label class="product-detail-container-order-main__title">Referencia:</label>
+                        <p class="product-detail-container-order-main__desc"
+                        id="product-detail-container-order-main__desc"></p>
+                </div>
+                <div class="product-detail-container-order-button">
+                    <label for="">Cantidad:</label>
+                    <div class="product-detail-container-order-params">
+                        <div class="product-detail-container-order-params__cant">
+                            <a class="product-detail-container-order-params__down" onclick="decrement(this)">-</a>
+                            <input type="text" value="1" id="product-detail-container-order-params__num"
+                            class="product-detail-container-order-params__num"
+                            onchange="updateTotal()" maxlength="2">
+                            <a class="product-detail-container-order-params__up" onclick="increment(this)">+</a>
+                        </div>
+                        <label for=""id="product-detail-container-order-params__price"></label>
+                    </div>
+                    <button class="product-detail-container-order-button__add" onclick="agregarOrden()">Agregar al Carrito</button><br>
+                    <button class="product-detail-container-order-button__buy" onclick="comprarOrden()">Comprar Ahora</button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="product-detail-container-description">
+            <label class="product-detail-container-description__title">Descripción del Producto:</label><br>
+            <p class="product-detail-container-description__desc"
+            id="product-detail-container-description__desc" ></p><br>
+            <label class="product-detail-container-description__sitio">Sitio Oficial:</label><br>
+            <a href="" id="product-detail-container-description__sitio" ></a>
+            
+        </div>
+
+    </main>
+    
+
+    <%- include('partials/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/product-detail.js"></script>
+</body>
+</html>

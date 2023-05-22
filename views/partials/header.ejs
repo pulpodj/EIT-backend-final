@@ -1,0 +1,67 @@
+<header class="header">
+    <nav class="navbar">
+        <button for="" class="navbar__menu-label" id="navbar-menu-btn">
+            <span class="navbar__menu-icon" id="navbar-menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </button>
+        <a href="/index.html" class="navbar__nav-link">
+            <img class="navbar__logo" src="/assets/images/logo.png" alt="" width="50">
+        </a>
+        <div class="user-navbar">
+            <div class="user-navbar__cart-icon-container">
+                <!-- TODO_ add font icon and icon item -->
+                <a href="/order">
+                <i class="fa-solid fa-cart-shopping user-navbar__cart-icon-container"></i>   
+                </a>
+                <div class="user-navbar__cart-badge" 
+                id="cart-count">0</div>
+            </div> 
+            <div class="user-navbar__user-avatar-container" id="user-navbar-user-avatar-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png" class="user-navbar__user-avatar" alt="Imagen de Usuario">
+            </div>
+            <!-- Sub Menu que se deapliega al dar click en el avatar  --> 
+            
+                <ul class="user-navbar__nav-links-container" id="user-navbar-nav-links-container">
+                    <li class="user-navbar__nav-item" id="user-navbar__name-user">
+                        <label class="user-navbar__nav-link">Usuario:</label>
+                    </li>
+                    <li class="user-navbar__nav-item" id="user-navbar__my-account">
+                        <a href="/my-account" class="user-navbar__nav-link">Mi Cuenta</a>
+                    </li>
+                    <li class="user-navbar__nav-item" id="user-navbar__change-pass">
+                        <a href="/password-change" class="user-navbar__nav-link">Cambiar Contraseña</a>
+                    </li>
+                    <li class="user-navbar__nav-item" id="user-navbar__admin-user">
+                        <a href="/admin-user" class="user-navbar__nav-link">Admin Usuarios</a>
+                    </li>
+                    <li class="user-navbar__nav-item" id="user-navbar__admin-product">
+                        <a href="/admin-product" class="user-navbar__nav-link">Admin Productos</a>
+                    </li>
+                    <li class="user-navbar__nav-item" id="sign-in">
+                        <a href="/login"  class="user-navbar__nav-link">Login</a>
+                    </li>
+                </ul> 
+            
+              
+        </div>
+        
+        <!-- Menu Principal de la cabecera -->
+        <ul class="navbar__nav-links-container" id="navbar-nav-links-container">
+            <li class="navbar__nav-item">
+                <a href="/index" class="navbar__nav-link">Inicio</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/contact"    class="navbar__nav-link">Contacto</a>
+            </li>
+            <li class="navbar__nav-item" id="navbar-nav-about">
+                <a href="/about-us"  class="navbar__nav-link">Nosotros</a>
+            </li>
+            <li class="navbar__nav-item" id="navbar-nav-register">
+                <a href="register"  class="navbar__nav-link">Registrarse</a>
+            </li>
+        </ul>
+        
+    </nav>
+   
+</header>

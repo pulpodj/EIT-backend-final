@@ -1,0 +1,194 @@
+.admin-product-container{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-product-form{
+    padding: 1rem;
+    border: 3px solid black;
+    margin: 1rem;
+    width: 300px;
+    height: 450px;
+
+    &__input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        margin: 0.5rem;
+    }
+
+    &__form-items {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+#description, #name, #category, #image {
+    width: 250px;
+}
+
+.admin-product-table-container {
+    width: 100vw;
+    overflow-x: scroll;
+}
+
+.admin-product-table {
+    border-collapse: collapse;
+}
+
+.admin-product-table thead tr {
+    background-color: dodgerblue;
+    color: white;
+    
+}
+.admin-product-table th, .admin-product-table td {
+    border: 1px solid skyblue;
+    font-size: .75rem;
+}
+
+.admin-product-table tr td:not(:first-child) {
+    padding: 0.5rem;
+    
+}
+.admin-product-table tbody tr:nth-child(odd) {
+    background-color: rgb(236, 250, 255);
+}
+.admin-product-table tr th {
+    padding: 0.5rem;
+}
+
+.admin-product {
+
+    &__title{
+        margin-top: 65px;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    &__img {
+        width: 70px;
+        object-fit: cover;
+        height: 70px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__desc {
+        width: 40%;
+    }
+
+    &__price {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__date {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__actions{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+            
+    &__edit-btn {
+        background-color: rgb(73, 162, 250); 
+        
+    }
+    
+    &__edit-btn:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+    
+    &__action-btn--favorite {
+        background-color: rgb(253, 247, 230); 
+    }
+    
+    &__action-btn--favorite:hover {
+        background-color: rgb(247, 217, 155); 
+    }
+    
+    &__delete-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+        width: 1.5rem;
+        height: 2rem;
+    }
+    
+    &__delete-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+
+    &__submit-btn {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgb(6, 58, 6);
+        color: white;
+        background-color: rgb(76, 121, 76);
+    
+    }
+   
+    &__btn-edit {
+        background-color: rgb(73, 162, 250); 
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+        width: 1.5rem;
+        height: 2rem;
+    }
+
+    &__btn-edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+  
+}
+
+
+@media screen and (min-width: 1000px) {
+    .admin-product-container{
+        flex-direction: row;
+    }
+    .admin-product-table-container{
+        overflow-x: auto;
+    }
+    
+}
+
+
+.admin-product-search-container {
+    margin: 1rem 0;
+    padding: 0 0 2rem;
+    border-bottom: 3px solid rgb(224, 223, 223) ;
+    width: 400px;
+
+    &__input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 0.5rem;
+    }
+
+    &__btn {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgb(58, 9, 6);
+        color: rgb(8, 8, 8);
+        background-color: rgb(92, 230, 198);
+        ;
+    
+    }
+
+}
+
+

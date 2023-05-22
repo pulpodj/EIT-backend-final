@@ -1,0 +1,192 @@
+.admin-user-form{
+    padding: 1rem;
+    border: 3px solid black ;
+    height: auto;
+    width: 400px;   
+    
+    &__form-input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        margin: 0.5rem;
+    }
+      
+    &__submint-btn {
+        text-align: center;
+    }
+      
+    &__delete-tablet-btn {
+        display:flex; 
+        justify-content:center; 
+        align-items:center;
+    }
+    
+}
+
+.admin-user-filter-table-btn {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(58, 9, 6);
+    color: rgb(8, 8, 8);
+    background-color: rgb(92, 230, 198);
+    ;
+
+}
+
+.admin-user-delete-table-btn {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(58, 9, 6);
+    color: rgb(8, 8, 8);
+    background-color: rgb(230, 108, 92);
+    ;
+
+}
+
+.admin-user-container{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .admin-user-container{
+        flex-direction: row;
+    }
+    .admin-user__table-container{
+        overflow-x: auto;
+    }
+    
+}
+
+.admin-user {
+
+    &__title {
+        margin-top: 65px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    &__title-form {
+        text-align: center;
+        text-decoration-line: underline;
+        margin: 0.5rem;
+    }
+
+    &__submit-btn {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgb(6, 58, 6);
+        color: white;
+        background-color: rgb(76, 121, 76);
+        ;
+    
+    }
+    
+    &__info{
+        font-size: 1.25rem !important;
+    }
+    
+    &__info-icon.disabled{
+        filter: grayscale(1);
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    &__action-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__action-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+    
+    &__action-btn--edit {
+        background-color: rgb(73, 162, 250); 
+    }
+    
+    &__action-btn--edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+    
+    &__action-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__action-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+
+    &__btn-edit {
+        border-color: blue;
+        background-color: rgb(73, 162, 250); 
+    }
+
+    &__btn-edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+   
+    
+
+}
+
+
+.admin-user-search-container {
+    margin: 1rem 0;
+    padding: 0 0 2rem;
+    border-bottom: 3px solid rgb(224, 223, 223) ;
+    width: 400px;
+
+    &__input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 0.5rem;
+    }
+    
+
+}
+
+
+.admin-user-table-container {
+    width: 100vw;
+    overflow-x: scroll;
+    margin: 1rem;
+}
+
+.admin-user-table {
+    border-collapse: collapse;
+}
+
+.admin-user-table thead tr {
+    background-color: rgb(88, 146, 204);
+    color: white;
+    
+}
+
+.admin-user-table th, .admin-user-table td {
+    border: 1px solid skyblue;
+    font-size: .75rem;
+}
+
+.admin-user-table tr td:not(:first-child) {
+    padding: 0.5rem;
+    
+}
+.admin-user-table tbody tr:nth-child(odd) {
+    background-color: rgb(236, 250, 255);
+}
+.admin-user-table tr th {
+    padding: 0.5rem;
+}

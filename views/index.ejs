@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home - Ecommerce</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <!-- TODO: Implementar carrusel en segundo modulo -->
+    <main class="main">
+        
+        <section class="section-cards">
+            <header class="section-cards__header">
+                <div class="section-cards__title-container" >
+                    <div class="section-cards-title" id="Hacienda" onclick="elegirCategoria('Hacienda')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/hacienda.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Consignación de Hacienda
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Nutricion Animal" onclick="elegirCategoria('Nutricion Animal')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/nutricionAnimal.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Nutrición Animal
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Acopio" onclick="elegirCategoria('Acopio')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/acopiol.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Acopio de Granos
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Agroinsumos" onclick="elegirCategoria('Agroinsumos')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/agroinsumos.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Agroinsumos
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Semillero" onclick="elegirCategoria('Semillero')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/semillero.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Semillero
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Combustibles" onclick="elegirCategoria('Combustibles')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/combustible.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Combustibles
+                        </a>
+                    </div>
+                    <div class="section-cards-title" id="Seguros" onclick="elegirCategoria('Seguros')">
+                        <img class="section-cards-title__img" src="/assets/images/slider/seguros.png" alt="">
+                        <a href="#" class="section-cards-title__link" >
+                            Seguros
+                        </a>
+                    </div>
+                </div>
+                <div class="section-cards__products-search-conteiner">
+                    <div class="product-search">
+                        <label for="" class="product-search__label">Buscar:</label>
+                        <input type="Text" placeholder="Buscar" class="product-search__input" id="products-search"
+                        onkeyup="buscarProductosInput(event)">
+                        <button class="product-search__btn" onclick="buscarProductosBtn()">Buscar</button>
+                    </div>
+                    <div class="section-cards__products-count" id="products-search-count">
+                        
+                    </div>
+                </div>
+                
+            </header>
+            <div class="cards-category-container">
+                <h1 class="cards-category-container__title" id="cards__category">Cegoria: Todos</h1>
+                    <button class="cards-category-container__btn" id="category-btn-close"> X </button>
+            </div>
+            <div class="cards-container" id="#card-container">
+            </div>
+        </section>
+    </main>
+    <%- include('partials/whatsapp') %>
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="/js/alert.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/header.js"></script>
+    
+</body>
+</html>

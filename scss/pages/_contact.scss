@@ -1,0 +1,89 @@
+.branchs {
+    &__title {
+        text-align: center;
+        border-bottom: 2px solid $color-green-lehmann;
+        margin: 10px;
+    }
+}
+
+
+.branch {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+}
+.branch-card {
+    margin: 1rem;
+    padding: 1rem;
+    // border: 1px solid #666;
+    background-color: $color-green-lehmann;
+    width: 280px;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgb(189, 183, 183);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    color: $color-text-light;
+        
+
+    &__header {
+        height: 170px;
+        color: white;
+        overflow: hidden;
+        transition: 1s ease-in-out;
+    }
+
+   
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        border-bottom: 2px solid green;
+    }
+
+    &__description {
+        padding: 1rem;
+        padding: 0 8px;
+        flex-grow: 1;
+        // height: 300px;
+        overflow: auto;
+        // text-align: justify;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    &__btn {
+        text-decoration: none;
+        background-color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        color: $color-green-lehmann;
+        box-shadow: 3px 3px 5px 1px black;
+        transition:  0.5s ease-in;
+
+    }
+
+    &__btn:hover {
+        background-color: rgb(11, 93, 175);
+    }
+
+    &:hover {
+        box-shadow: 5px 5px 10px rgba(19, 13, 13, 0.484);
+        border-top: 3px solid blue;
+        border-bottom: 3px solid blue;
+    }
+
+}

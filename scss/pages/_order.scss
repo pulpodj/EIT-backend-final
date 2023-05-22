@@ -1,0 +1,223 @@
+.order-table-container {
+    width: auto;
+    margin: 20px 50px;
+   
+}
+
+.order-table {
+    width: 90%;
+   // border-collapse: collapse;
+}
+
+.order-table thead tr {
+    background-color: dodgerblue;
+    color: white;
+    
+}
+.order-table th, .order-table td {
+    border: 1px solid skyblue;
+    font-size: .75rem;
+}
+
+.order-table tr td:not(:first-child) {
+    padding: 0.5rem;
+    
+}
+.order-table tbody tr:nth-child(odd) {
+    background-color: rgb(236, 250, 255);
+}
+.order-table tr th {
+    padding: 0.5rem;
+}
+
+.order-cant-btn{
+    display: flex;
+    //align-items: center;
+    justify-content: space-around;
+    width: auto;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 0 20px;
+
+    &__decrement{
+        background-color: white;
+        width: 20px;
+        border: none;
+        font-size: 1.2rem;
+    }
+
+    &__input{
+        text-align: center;
+        border: none;
+        width: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        
+    }
+
+    &__increment{
+        background-color: white;
+        width: 20px;
+        border: none;
+        font-size: 1.2rem;
+    }
+}
+
+.order {
+
+    &__title{
+        margin-top: 65px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    &__img {
+        width: 70px;
+        object-fit: cover;
+        height: 70px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    &__price {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__cant {
+        width: 140px;
+    }
+
+    &__others {
+        vertical-align: center;
+        text-align: center;
+    }
+
+    &__info{
+        font-size: 1.25rem !important;
+    }
+    
+    &__info-icon.disabled{
+        filter: grayscale(1);
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    &__action-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__action-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+    
+    &__edit-btn {
+        background-color: rgb(73, 162, 250); 
+    }
+    
+    &__edit-btn:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+    
+    &__action-btn--favorite {
+        background-color: rgb(253, 247, 230); 
+    }
+    
+    &__action-btn--favorite:hover {
+        background-color: rgb(247, 217, 155); 
+    }
+    
+    &__delete-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__delete-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+
+    &__submit-btn {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgb(6, 58, 6);
+        color: white;
+        background-color: rgb(76, 121, 76);
+    
+    }
+   
+    &__btn-edit {
+        background-color: rgb(73, 162, 250); 
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+
+    &__btn-edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+
+    &__total{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-weight: bold;
+        height: 70px;
+    }
+        
+    
+
+
+}
+
+.order-finalizar{
+    display: flex;
+    justify-content: right;
+    width: 86%;
+    &__btn{
+        width: auto;
+        padding: 0.5rem;
+        height: 2rem;
+        border-radius: 5px;
+        color: white;
+        background-color: $color-green-lehmann;
+        font-weight: bold;
+        border: none;
+    }
+}
+
+.order-import-total{
+    text-align: center;
+    color: white;
+    background-color: #2E5092;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .order-table-container {
+        width: 600;
+        margin: 0;
+       
+    }
+    
+    .order-table {
+        width: 90%;
+       // border-collapse: collapse;
+    }   
+     
+    .order-cant-btn{
+        margin: 0;
+    }
+
+ } 

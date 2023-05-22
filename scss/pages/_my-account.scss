@@ -1,0 +1,204 @@
+.main-my-account{
+    display: flex;
+    margin: 0;
+}
+
+.my-account-form{
+    padding: 1rem;
+    // border: 3px solid black ;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    width: 400px;   
+    
+    
+    &__form-input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        margin: 0.5rem;
+    }
+      
+    &__submint-btn {
+        text-align: center;
+    }
+      
+    &__delete-tablet-btn {
+        display:flex; 
+        justify-content:center; 
+        align-items:center;
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+.my-account {
+
+    &__title {
+        margin-top: 65px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        background-color: rgb(228, 228, 228);
+    }
+
+    &__title-form {
+        text-align: center;
+        // text-decoration-line: underline;
+        margin: 0.5rem;
+    }
+
+    &__submit-btn {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgb(6, 58, 6);
+        color: white;
+        background-color: rgb(76, 121, 76);
+        border-radius: 5px;
+    
+    }
+    
+    &__info{
+        font-size: 1.25rem !important;
+    }
+    
+    &__info-icon.disabled{
+        filter: grayscale(1);
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    &__action-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__action-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+    
+    &__action-btn--edit {
+        background-color: rgb(73, 162, 250); 
+    }
+    
+    &__action-btn--edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+    
+    &__action-btn {
+        background-color: rgb(254, 33, 33);
+        border: none;
+        padding: 0.25rem;
+        border-radius: 2px;
+        color: white;
+    }
+    
+    &__action-btn:hover {
+        background-color: rgb(199, 1, 1);
+    }
+
+    &__btn-edit {
+        border-color: blue;
+        background-color: rgb(73, 162, 250); 
+    }
+
+    &__btn-edit:hover {
+        background-color: rgb(8, 131, 255); 
+    }
+   
+    
+
+}
+
+.my-acoount-article{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.my-account-order{
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    &__row{
+        margin: 20px;
+    }
+
+    &__img {
+        width: 70px;
+        object-fit: cover;
+        height: 70px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__name {
+        width: 20%;
+    }
+
+    &__desc {
+        width: 40%;
+    }
+
+    &__desc-p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Número de líneas que deseas mostrar */
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    &__price {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    &__quantity {
+        font-weight: bold;
+        text-align: left;
+    }
+
+   
+}
+
+.my-account-order-title{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    
+}
+
+.my-account-order-button{
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    border-top: 1px solid grey;
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .main-my-account{
+        flex-direction: column;
+    }
+    .orders-container{
+        overflow-x: auto;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .my-account-order__desc{
+        display: none;
+    }
+   
+    
+}

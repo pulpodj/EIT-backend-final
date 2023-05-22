@@ -1,0 +1,163 @@
+.product-datail-container{
+    margin: 5%;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.product-detail-container-img{
+    // background-color: grey;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        width: 90%;
+        
+    }
+    
+}
+
+.product-detail-container-order{
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+
+}
+
+.product-detail-container-order-head{
+    margin: 10px 0;
+    
+
+    &__category{
+        font-size: 0.75rem;
+    }
+
+    &__name {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+}
+
+.product-detail-container-order-main{
+    padding: 10px 20px 10px;
+    margin: 20px 0;
+    flex-grow: 1;
+
+    &__title{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    &__desc{
+        text-align: justify;
+    }
+}
+
+.product-detail-container-order-params{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+    font-size: 30px;
+
+    &__cant {
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__up &__down{
+        margin: 0 5px;
+        font-size: 25px;
+    }
+
+    &__num{
+        border: none;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
+
+.product-detail-container-order-head{
+    background-color: rgb(227, 226, 221);
+    
+}
+.product-detail-container-order-main{
+    background-color: rgb(227, 226, 221);
+    
+}
+
+.product-detail-container-order-button{
+    
+
+    &__add{
+        width: 100%;
+        border-radius: 5px;
+        background-color: rgb(109, 129, 245);
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+    }
+    &__buy{
+        border-radius: 5px;
+        background-color: rgb(227, 226, 221);
+        margin-top: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 100%;
+        color: rgb(109, 129, 245);
+    }
+   
+}
+
+.product-detail-container-description{
+
+    margin: 5% 10%;
+    width: 60%;
+
+    &__title{
+        font-weight: bold;
+        font-size: 1.2rem; 
+    }
+
+    &__desc{
+        text-align: justify;
+    }
+
+    &__sitio{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .product-datail-container{
+        flex-direction: column;
+        margin: 2%;
+
+    }
+
+    .product-detail-container-img{
+        // background-color: grey;
+        width: 80%;
+                
+    }
+    
+    .product-detail-container-order{
+        width: 100%;
+       
+    }
+
+
+ } 

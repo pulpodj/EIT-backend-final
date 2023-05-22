@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Admin Peoducts</title>
+    <script src="/js/isAdmin.js"></script>
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <h1 class="admin-product__title">ABM Productos</h1>
+
+    <main class="main admin-product-container">
+            <form class="admin-product-form" id="admin-product-form" onsubmit="addProduct(event)"         data-custom="Mi atributo personal">
+            <div class="admin-product-form__items">
+                <label for="name" >Nombre Producto</label><br>
+                <input type="text" name="name" class="admin-product-form__input"
+                id="name" placeholder="Nombre del Producto" 
+                required minlength="3" maxlength="50" autofocus >
+            </div>
+            <div class="admin-product-form__items">
+                <label for="category">Categoria</label><br>
+                <select name="category" id="category"  class="admin-product-form__input" required>
+                            
+                </select>
+            </div>
+            <div class="admin-product-form__items">
+                <label for="description" >Descripción</label><br>
+                <textarea name="description" class="admin-product-form__input"
+                id="description" rows="5" required> </textarea>
+            </div>
+            <div class="admin-product-form__items">
+                <label for="price" >Precio</label><br>
+                <input type="number" name="price" id="price" required min="1" class="admin-product-form__input"  > 
+            </div>  
+            <div class="admin-product-form__items" id="admin-product-input-img">
+                <label for="image">URL de Imagen</label><br>
+                        <div class="input-box">
+                        <input type="file" accept="image/*" name="image" >
+                    </div>
+            </div>
+            
+
+            <div class="admin-product-form__items">
+                <label for="bornDateInput">Fecha de Actualización</label><br>
+                <input type="date" name="date" id="bornDateInput" class="admin-product-form__input"
+                placeholder="dd/mm/aaaa"   >
+            </div>
+            
+            <div class="admin-product-form__form-items">
+                <button type="submit" class="admin-product__submit-btn" id="admin-product__submit-btn">Cargar Producto</button> 
+            </div>
+            
+        </form>
+        <div class="admin-product-table-container">
+            <div class="admin-product-search-container">
+                <label for="search" style="font-weight: bold;">Buscar en la Tabla:</label>
+                <input type="text" name="search" class="admin-product-form__input" id="search" 
+                onkeyup="buscarProductosInput(event)">
+                <button  type="button" class="admin-product-search-container__btn" onclick="metodoFilter()" >Filtrar</button><br>
+                <label id="admin-product-search-container_cant">Cantidad de Coincidencias: 0</label>
+            </div>
+            <h2>Tabla de Productos:</h2>
+            <table class="admin-product-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-product-table_body">
+                    
+                </tbody>
+            </table>
+        </div>
+            
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="/js/alert.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/admin-product.js"></script>
+</body>
+</html>

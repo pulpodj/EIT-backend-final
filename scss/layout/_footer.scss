@@ -1,0 +1,78 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $color-green-lehmann;
+    border-bottom: 5px solid $color-yellow-lehmann;
+    border-top: 5px solid black;
+
+    &__column {
+        padding: 3rem 3.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__column-med {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        border: none; 
+    }
+
+    &__contact-item {
+        list-style: none;
+        
+    }
+    
+    &__contact-link {
+        color: white;
+        padding: .25rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        
+    }
+
+    &__logo {
+        width: 200px;
+        margin: 10px;
+    }
+
+    .footer__contact-icon {
+        font-size: 1.5rem;
+        &--facebook {
+            color: #38529a;
+        } 
+        &--instagram {
+            color: #f14d59;
+        }
+        &--linkedin {
+            color: #0077;
+        }
+        }
+    }
+     
+
+
+@media screen and (min-width: 600px) {
+    .footer {
+        flex-direction: row;
+        
+        &__column-med {
+            margin: 10px;
+            padding: 10px 50px;
+            border-right: 1px solid $color-text-light;
+            border-left: 1px solid $color-text-light;
+        }
+        
+        &__column {
+            padding: 50px 50px;
+        }    
+    }
+
+}  

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About - Ecommerce</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+<main class="main"> 
+<section class="about" data-hash="quienes-somos">
+    <div class="about-vision">
+        <div class="about-vision__title">
+            <h1>Visión, Misión y Valores</h1>
+        </div>
+        <div class="about-vision-container">
+            <div class="about-vision-container__description">
+                <p>Somos una organización de productores agropecuarios que trabaja por y para productores agropecuarios desde hace más de 70&nbsp;años.</p><br><br>
+                
+                <p><strong>Nuestra Visión</strong></p><br>
+                <p>Ser líderes regionales en la creación de negocios de valor para nuestros productores agropecuarios asociados, promoviendo la sostenibilidad económica, social y ambiental, en el marco de los principios cooperativos.</p><br><br>
+                
+                <p><strong>Nuestra Misión</strong></p><br>
+                <p>Ser el aliado estratégico del productor agropecuario, brindando servicios de excelencia, que permitan:</p>
+                <ul class="about-vision-container__ul" >
+                    <li>
+                        <p>Optimizar su producción.</p>
+                    </li>
+                    <li>
+                        <p>Mejorar la calidad de vida de los socios, colaboradores, clientes, proveedores, sus familias y sus comunidades.</p>
+                    </li>
+                </ul><br><br>
+                <p><strong>Nuestros Valores</strong></p>
+                <ul class="about-vision-container__ul" >
+                    <li>
+                        <p><strong>Integridad:</strong> Somos responsables de mantener conductas transparentes y coherentes con los principios cooperativos,
+                            nuestro código de ética y con nuestras políticas y procedimientos internos, buscando así inspirar confianza.</p><br>
+                    </li>
+                    <li>
+                        <p><strong>Excelencia:</strong> Actuamos con profesionalidad y perseverancia, buscando superarnos cada día. Gestionamos los recursos
+                            con inteligencia y eficiencia para cumplir nuestros objetivos, en la búsqueda constante de nuevos desafíos. Buscamos inspirar para transformar.</p><br>
+                    </li>
+                    <li>
+                        <p><strong>Innovación:</strong> Transformamos ideas en valor, creando y mejorando servicios, prácticas y procesos que permitan incrementar
+                            la productividad y la competitividad de la empresa y la de sus asociados.</p><br>
+                    </li>
+                    <li>
+                        <p><strong>Compromiso con la comunidad:</strong> Estamos comprometidos con el cuidado y la preservación del medio ambiente. Promovemos 
+                            la sinergia del trabajo compartido y el desarrollo de las personas, como motor de transformación de las comunidades.</p><br>
+                    </li>
+                </ul>
+                               
+            </div>
+            <div class="about-vision-container__img">
+                <img  src="https://cooperativalehmann.coop/web/uploads/company/2/gallery/1-desktop.webp?1630614668" alt="" >
+                <img  src="https://cooperativalehmann.coop/web/uploads/company/2/gallery/0-desktop.webp?1630614675" alt="" >
+            </div>
+        </div>
+    </div>
+</section>
+<div class="about-vision__title">
+    <h1>Historia</h1>
+</div>		
+<section class="historia" data-hash="historia">
+    
+    <div class="historia-carrusel">
+        
+        <div class="historia-carrusel_link">
+            
+            <ul class="historia-carrusel__menu">
+                
+                <li>
+                    <a href="#slide1">1951-1961</a>
+                </li>
+                <li>
+                    <a href="#slide2">1968-1985</a>
+                </li>
+                <li>
+                    <a href="#slide3">1992-1999</a>
+                </li>
+                <li>
+                    <a href="#slide4">2000-2006</a>
+                </li>
+                <li>
+                    <a href="#slide5">2010-2012</a>
+                </li>
+                <li>
+                    <a href="#slide6">2013-2020</a>
+                </li>
+                <li>
+                    <a href="#slide7">2021-2022</a>
+                </li>
+            </ul>
+        </div>
+        <div class="historia-slider-container">  
+            <ul class="historia-slider-container__slider">
+                <li id="slide1">
+                    <img src="/assets/images/Nosotros/historia1.png" />
+                </li>
+                <li id="slide2">
+                    <img src="/assets/images/Nosotros/historia2.png" />
+                </li>
+                <li id="slide3">
+                    <img src="/assets/images/Nosotros/historia3.png" />
+                </li>
+                <li id="slide4">
+                    <img src="/assets/images/Nosotros/historia4.png" />
+                </li>
+                <li id="slide5">
+                    <img src="/assets/images/Nosotros/historia5.png" />
+                </li>
+                <li id="slide6">
+                    <img src="/assets/images/Nosotros/historia6.png" />
+                </li>
+                <li id="slide7">
+                    <img src="/assets/images/Nosotros/historia7.png" />
+                </li>
+            </ul>
+        </div>          
+    </div>
+
+  
+</section>
+	
+</main>
+<%- include('partials/whatsapp') %>
+<%- include('partials/footer') %> 	
+	
+    <script src="/js/about-us.js"></script>
+    <script src="/js/header.js"></script>
+
+</body>
+</html>

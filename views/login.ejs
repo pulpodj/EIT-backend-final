@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Ecommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <!-- TODO: Implementar carousel en 2do módulo -->
+    <main class="main-login">
+        <section class="section-register">
+            <header class="section-register__header">
+                <div class="section-register__title">
+                    <h1>
+                        Login Ecommerce Coop.
+                    </h1>
+                </div>  
+            </header>
+
+            <form class="section-register__form" id="loginForm">
+                
+                <div class="section-register__form-items">
+                    <label for="email" >Usuario</label><br>
+                    <input type="email" name="email" id="email" required
+                    placeholder="example@email.com" class="section-register__form-input"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"> 
+                </div>
+                <div class="section-register__form-items">
+                    <label for="password" >Contraseña</label><br>
+                    <input type="password" name="password" id="password" class="section-register__form-input" 
+                     required>
+                </div>
+                
+                <div class="section-register__form-items">
+                    <button type="submit" class="section-register__form-btn" id="registerSubmit" >Ingresar</button> 
+                </div>
+                
+            </form>
+
+        </section>
+    </main>
+    <%- include('partials/whatsapp') %>
+    <%- include('partials/footer') %>
+   
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>   
+ <script src="/js/alert.js"></script>  
+ <script src="/js/header.js"></script> 
+ <script src="/js/login.js"></script>   
+</body>
+</html>
