@@ -6,6 +6,10 @@ const tableBody = document.getElementById('admin-product-table_body');
 const submitBtn = document.getElementById('admin-product__submit-btn');
 const productForm = document.getElementById('admin-product-form');
 const inputImgForm = document.getElementById('admin-product-input-img');
+ 
+
+
+
 let editIndex;
 
 const URL = 'http://localhost:13000';
@@ -60,7 +64,14 @@ function renderizarTabla(products){
       let imageSrc = producto.image ? `${URL}/upload/product/${producto.image}` : '/assets/images/no-product.png';
        const tableRow = `
        <tr>
-                <td><img class= "admin-product__img" src="${imageSrc}" alt="${producto.name}" width="80px"></td>
+                <td class= "admin-product__img-container"><img class= "admin-product__img" src="${imageSrc}" 
+                alt="${producto.name}" width="80px">
+                <input type="file" id="inputFile" style="display:none" accept="image/*">
+                <button class ="admin-product__img-btn" id ="admin-product-img-btn" 
+                onclick= "actualizarImg('${producto._id}')">
+                Actualizar Imagen
+                </button> 
+                </td>
                 <td>${producto.name}</td>
                 <td class="admin-product__desc">${producto.description}</td>
                 <td class="admin-product__price">$ ${producto.price}</td>
@@ -221,6 +232,37 @@ function limpiarInput(){
   cargarFechaActual();
  
 }
+
+function actualizarImg(id) {
+    var inputFile = document.getElementById('inputFile');
+ // Asignar una función al evento onchange del campo de entrada de archivos
+    inputFile.onchange = function() {
+    obtenerNombreImagen(id);
+    };
+    // Simular un clic en el campo de entrada de archivos
+    inputFile.click();
+  }
+
+  async function obtenerNombreImagen(id) {
+    try {
+        const inputFile = document.getElementById('inputFile');
+        // Obtener el nombre del archivo seleccionado
+        var selectedFile = inputFile.value;
+         
+        const updateImg = {
+            image: selectedFile
+        }
+        const response = await axios.put(`${URL}/products/${id}/image`,updateImg,{
+            headers: {Authorization: token}});
+        
+        console.log(selectedFile)    
+        cargarProductos();
+        
+        } catch (error) {
+            console.log(error)
+        }
+  
+  }
 
 //formatea la fecha devuelta por mondo db
 function formatDateAR(fechaMongoDB){

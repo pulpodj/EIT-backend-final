@@ -68,6 +68,12 @@
         background-color: rgb(228, 228, 228);
     }
 
+    &__img-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__img {
         width: 70px;
         object-fit: cover;
@@ -75,6 +81,17 @@
         border-radius: 50%;
         display: block;
         margin: 0 auto;
+    }
+
+    &__img-btn{
+        border: none;
+        background-color: rgba(231, 228, 228, 0.527);
+        border-radius: 20px;
+    }    
+
+    &__img-btn:hover {
+        color: rgb(26, 124, 6);
+        background-color: white;
     }
 
     &__desc {
