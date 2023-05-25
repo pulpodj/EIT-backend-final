@@ -247,22 +247,20 @@ function actualizarImg(id) {
     try {
         const inputFile = document.getElementById('inputFile');
         // Obtener el nombre del archivo seleccionado
-        var selectedFile = inputFile.value;
          
-        const updateImg = {
-            image: selectedFile
-        }
-        const response = await axios.put(`${URL}/products/${id}/image`,updateImg,{
+        const formData = new FormData();
+            formData.append("image", inputFile.files[0] );
+
+        const response = await axios.put(`${URL}/products/${id}/image`,formData,{
             headers: {Authorization: token}});
-        
-        console.log(selectedFile)    
+            
         cargarProductos();
         
         } catch (error) {
             console.log(error)
         }
-  
-  }
+}
+
 
 //formatea la fecha devuelta por mondo db
 function formatDateAR(fechaMongoDB){
