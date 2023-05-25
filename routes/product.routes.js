@@ -11,13 +11,13 @@ router.get("/products",productosController.getProducts)
 //obtener un producto segun su id
 router.get("/products/:id",productosController.getProduct)
 
-//Agregar un productos
+//Agregar un producto
 router.post("/products",[jwtVerify, isAdmin],uploadController.uploadProduct,productosController.addProduct)
 
-//Borrar producto
+//Borrar un producto
 router.delete("/products/:id",[jwtVerify, isAdmin],productosController.deleteProduct)
 
-//Actualizar el producto
+//Actualizar un producto
 router.put("/products/:id",[jwtVerify, isAdmin],productosController.updateProduct)
 
 //Actualizar imagen del producto

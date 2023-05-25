@@ -17,9 +17,3 @@ mongoose.connect(dbURL)
     .catch((error)=>{
     console.log(error)
     })
-
-
-
-// app.listen(port, () => {
-//   console.log(`Servidor funcionando en puerto ${port}`)
-// })

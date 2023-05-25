@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const viewsController = require('../controllers/views.controller.js')
 
+router.get('/',(req,res) => res.render('index'))
 router.get('/index',(req,res) => res.render('index'))
 router.get('/about-us',(req,res) => res.render('about-us'))
 router.get('/admin-product',(req,res) => res.render('admin-product'))

@@ -6,16 +6,16 @@ const orderController = require('../controllers/order.controller')
 //obtener todas las ordenes
 router.get("/orders/:idUser/user",orderController.getOrders)
 
-//obtener un Orden
+//obtener una Orden por su id
 router.get("/orders/:id",orderController.getOrder)
 
-//agregar un Orden
+//agregar una Orden
 router.post("/orders",orderController.addOrder)
 
-//Borrar un Orden
+//Borrar una Orden
 router.delete("/orders/:id",orderController.deleteOrder)
 
-//actualizar el order
+//actualizar una order
 router.put("/orders/",orderController.updateOrder)
 
 

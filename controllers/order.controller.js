@@ -33,48 +33,51 @@ const getOrders = async (req,res) => {
     
 }
 
-const addOrder = (req,res) => {
-    const order = new Order(req.body)
-    order.save().then(() => {
+const addOrder = async (req,res) => {
+    try {
+        const order = new Order(req.body)
+        await order.save()
         res.status(200).send('Orden añadida correctamente');
-    }).catch(error => {
+    } catch (error) {
+        res.status(500).send({
+            msg: 'La orden no se pudo guardar',
+            error: error
+        });
         console.log(error)
-        res.status(500).send('LA orden no se pudo guardar');
-    })
-    
+    }       
 }
 
-const deleteOrder = (req,res) => {
-    const id = req.params.idOrder;
-    Order.findByIdAndDelete(id)
-    .then((deleted) => {
+const deleteOrder = async (req,res) => {
+    try {
+        const id = req.params.idOrder;
+        const deleted = Order.findByIdAndDelete(id)
         if(!deleted){
-            return res.status(404).send({mgr:'no se encontro la orden a borrar'});
-            }
-
+        return res.status(404).send({mgr:'no se encontro la orden a borrar'});
+        }
         return res.status(200).send({
             msg: 'Orden borrada correctamente',
             deleted
         })
-    })
-    .catch(error => {
+    } catch (error) {
         console.log(error);
         return res.status(500).send({
             msg: 'Error al borrar la orden'
         });
-    })
+    }
+    
 }
 
-const getOrder = (req,res) => {
-    const idParam = req.params.id;
+const getOrder = async (req,res) => {
+    try {
+        const idParam = req.params.id;
 
-if(!idParam){
-    return res.status(400).send({
-        mgs:`Es necesario que mande ID`
-    })
-}
+        if(!idParam){
+            return res.status(400).send({
+            mgs:`Es necesario que mande ID`
+            })
+        }
 
-    Order.findById(idParam).then((order) =>{    
+        const order = Order.findById(idParam)    
         if(!order){
             return res.status(404).send({
                 mgs:`No se encontro la orden`
@@ -84,7 +87,15 @@ if(!idParam){
             msg: 'Orden borrada',
             order
         });
-    })
+    
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send({
+            msg: 'Error al borrar la orden'
+        });
+    }
+    
     
 }
 
@@ -115,14 +126,6 @@ async function updateOrder(req,res) {
         }
 }
 
-async function getUserOrders(){
-const userID = req.params.id;
-
-
-
-
-
-}
 
 module.exports = {
     getOrders,

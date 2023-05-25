@@ -7,7 +7,7 @@ const isAdmin = require('../middlewares/isAdmin');
 //obtener todos los usuarios
 router.get("/users", [jwtVerify, isAdmin],userController.getAllUsers)
 
-//obtener un usuario
+//obtener un usuario segun su id
 router.get("/users/:id", jwtVerify,userController.getUser)
 
 //Agregar un usuario
