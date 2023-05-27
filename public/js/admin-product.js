@@ -149,7 +149,7 @@ function deleteProduct(id){
                     console.log('entro');
                 response = await  axios.delete(`${URL}/products/${id}`,{
                             headers: {Authorization: token}});  
-                showAlert('Producto eliminado Correctamente','error')
+                showAlert('Producto eliminado Correctamente','exito')
                 cargarProductos();
                 }
         } catch (error) {
