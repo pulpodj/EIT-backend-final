@@ -3,7 +3,7 @@ const passForm = document.getElementById('passForm');
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 const token = localStorage.getItem('token');
 
-const URL = 'http://localhost:13000'
+const URL = 'https://eit-backend-final.onrender.com'
 
 passForm.addEventListener('submit',async (event) => {
     event.preventDefault();

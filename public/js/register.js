@@ -2,7 +2,7 @@
 const registerForm = document.querySelector('#registerForm');
 //obtener boton submit
 const resgisterBtn = document.getElementById('registerSubmit');
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 
 registerForm.addEventListener('submit', async (evt)=>{
 

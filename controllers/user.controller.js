@@ -86,7 +86,7 @@ async function getUser(req,res){
 
 async function getAllUsers (req,res){
     try {
-        const user = await User.find();
+        const user = await User.find({ email: { $ne: "admin@gmail.com" } });
         if(!user){
             return res.status(404).send({msg:`No se encontraron del usuarios`})  
         }

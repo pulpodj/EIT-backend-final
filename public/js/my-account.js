@@ -1,5 +1,5 @@
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 const token = localStorage.getItem('token');
 const orderContainer = document.getElementById('orders-container');
 const userForm = document.getElementById('my-account-form');

@@ -1,6 +1,6 @@
 //1- Obtener los datos del Formulario
 const loginForm = document.getElementById('loginForm');
-const URL = 'http://localhost:13000'
+const URL = 'https://eit-backend-final.onrender.com'
 
 loginForm.addEventListener('submit',async (event) => {
     event.preventDefault();

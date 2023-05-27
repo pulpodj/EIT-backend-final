@@ -1,6 +1,6 @@
 //Guardo la orden del local storage en la variable Products
 let Products = JSON.parse(sessionStorage.getItem('order')) || [];
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 
 //Tabla de productos
 const tableBody = document.getElementById('order-table_body');

@@ -12,7 +12,7 @@ const inputImgForm = document.getElementById('admin-product-input-img');
 
 let editIndex;
 
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 const token = localStorage.getItem('token');
 
 (async function cargarCategorias(){

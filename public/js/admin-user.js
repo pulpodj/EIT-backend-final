@@ -10,7 +10,7 @@ let pass2Input = document.getElementById('password2');
 let editIndex = undefined;
 
 let Users = [];
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 
 
 //Funcion para rellenar la tabla del Index 

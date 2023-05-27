@@ -3,7 +3,7 @@ const index = params.split('id=')[1];
 const paramsURL = new URLSearchParams(params);
 const paramsEntries = Object.fromEntries(paramsURL);
 const products = [];
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com';
 let product;
 
 
