@@ -1,7 +1,7 @@
 const cardContainer = document.getElementById('#card-container');
 const btnCloseCategory = document.getElementById("category-btn-close");
 let Products = [];
-const URL = 'http://localhost:13000';
+const URL = 'https://eit-backend-final.onrender.com/';
 
 
 async function cargarProductos(){
